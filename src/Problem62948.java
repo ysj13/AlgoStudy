@@ -1,5 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Problem62948 {
     public static void main(String[] args) {
@@ -12,19 +12,26 @@ public class Problem62948 {
             strArr[i] = "" + numbers[i];
         }
 
-        for(int i = 0; i < strArr.length - 1; i++) {
-            for(int j = i + 1; j < strArr.length; j++) {
-                String s1 = strArr[i];
-                String s2 = strArr[j];
-
-                // compareTo : 기준값이 비교하는값보다 작으면 -1 리턴
-                // if문이 true라면 s1, s2 위치를 바꿔준다
-                if((s1+s2).compareTo(s2+s1) < 0) {
-                    strArr[i] = strArr[j];
-                    strArr[j] = s1;
-                }
+        Arrays.sort(strArr, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return (s2 + s1).compareTo(s1 + s2);
             }
-        }
+        });
+
+//        for(int i = 0; i < strArr.length - 1; i++) {
+//            for(int j = i + 1; j < strArr.length; j++) {
+//                String s1 = strArr[i];
+//                String s2 = strArr[j];
+//
+//                // compareTo : 기준값이 비교하는값보다 작으면 -1 리턴
+//                // if문이 true라면 s1, s2 위치를 바꿔준다
+//                if((s1+s2).compareTo(s2+s1) < 0) {
+//                    strArr[i] = strArr[j];
+//                    strArr[j] = s1;
+//                }
+//            }
+//        }
 
         String answer = "";
         for(String s : strArr) {
