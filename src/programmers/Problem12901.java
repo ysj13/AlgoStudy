@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Problem12901 {
     public static void main(String[] args) {
+        // sample case
         int a = 5;
         int b = 24;
 
