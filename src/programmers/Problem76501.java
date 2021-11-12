@@ -1,3 +1,5 @@
+package programmers;
+
 public class Problem76501 {
     public static void main(String[] args) {
         int[] absolutes = {4, 7, 12};
