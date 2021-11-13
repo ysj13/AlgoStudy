@@ -4,7 +4,9 @@ import java.util.Stack;
 
 public class Problem12909 {
     public static void main(String[] args) {
+        //sample case
         String s = "(())()";
+
         boolean answer = true;
         Stack<Character> stack = new Stack<>();
 
