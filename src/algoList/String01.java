@@ -1,4 +1,4 @@
-package AlgoList;
+package algoList;
 /**
  * 같은 문자열 찾기
  */
