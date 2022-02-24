@@ -2,7 +2,9 @@ package leetcode;
 
 public class ValidPalindrome {
     public static void main(String[] args) {
+        // sample case
         String s = "A man, a plan, a canal: Panama";
+
         System.out.println(isPalindrome(s));
     }
 
