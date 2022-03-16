@@ -1,5 +1,8 @@
 package leetcode;
 
+/**
+ * 팰린드롬(replaceAll 정규식 이용)
+ */
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         String[] strs = {"flower", "flow", "flight"};
